@@ -1,0 +1,24 @@
+version: "3.4"
+
+services:
+  poste:
+    image: analogic/poste.io
+    restart: always
+    network_mode: "host"
+    expose:
+      - 25
+      - 110
+      - 143
+      - 465
+      - 587
+      - 993
+      - 995
+      - 5080
+      - 5443
+    volumes:
+      - ./data:/data
+    environment:
+      - HTTPS=off
+      - DISABLE_CLAMAV=TRUE
+      - HTTP_PORT=5080
+      - HTTPS_PORT=5443
