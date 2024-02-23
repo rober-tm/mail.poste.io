@@ -18,7 +18,7 @@ services:
     volumes:
       - ./data:/data
     environment:
-      - HTTPS=off
+      - HTTPS=on
       - DISABLE_CLAMAV=TRUE
       - HTTP_PORT=5080
       - HTTPS_PORT=5443
