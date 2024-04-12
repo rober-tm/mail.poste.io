@@ -14,7 +14,8 @@ services:
       - 993
       - 995
       - 5080
-      - 5443
+      - 5443 
+      - 4190
     volumes:
       - ./data:/data
     environment:
