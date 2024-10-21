@@ -15,7 +15,7 @@ services:
       - 5443 
       - 4190
     volumes:
-      - ./data:/data
+      - /home/rober/proyects/mail.poste.io/data:/data
     environment:
       - HTTPS=on
       - DISABLE_CLAMAV=TRUE

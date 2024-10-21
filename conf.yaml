@@ -1,0 +1,55 @@
+services:
+  poste:
+    image: analogic/poste.io
+    restart: always
+    ports:
+      - '25:25'
+      - '110:110'
+      - '143:143'
+      - '465:465'
+      - '587:587'
+      - '993:993'
+      - '995:995'
+      - '4190:4190'
+    volumes:
+      - '/home/rober/proyects/mail.poste.io/data:/data'
+    environment:
+      HTTPS: 'off'
+      COOLIFY_CONTAINER_NAME: poste-p0k8g8o
+    networks:
+      p0k8g8o: null
+    labels:
+      - coolify.managed=true
+      - coolify.version=4.0.0-beta.317
+      - coolify.serviceId=24
+      - coolify.type=service
+      - coolify.name=poste-p0k8g8o
+      - coolify.pullRequestId=0
+      - coolify.service.subId=73
+      - coolify.service.subType=application
+      - traefik.enable=true
+      - traefik.http.middlewares.gzip.compress=true
+      - traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https
+      - traefik.http.routers.http-0-p0k8g8o-poste.entryPoints=http
+      - traefik.http.routers.http-0-p0k8g8o-poste.middlewares=redirect-to-https
+      - 'traefik.http.routers.http-0-p0k8g8o-poste.rule=Host(`mail.angeltrucco.com`) && PathPrefix(`/`)'
+      - traefik.http.routers.https-0-p0k8g8o-poste.entryPoints=https
+      - traefik.http.routers.https-0-p0k8g8o-poste.middlewares=gzip
+      - 'traefik.http.routers.https-0-p0k8g8o-poste.rule=Host(`mail.angeltrucco.com`) && PathPrefix(`/`)'
+      - traefik.http.routers.https-0-p0k8g8o-poste.tls.certresolver=letsencrypt
+      - traefik.http.routers.https-0-p0k8g8o-poste.tls=true
+      - 'caddy_0.encode=zstd gzip'
+      - 'caddy_0.handle_path.0_reverse_proxy={{upstreams}}'
+      - 'caddy_0.handle_path=/*'
+      - caddy_0.header=-Server
+      - 'caddy_0.try_files={path} /index.html /index.php'
+      - 'caddy_0=https://mail.angeltrucco.com'
+      - caddy_ingress_network=p0k8g8o
+    container_name: poste-p0k8g8o
+volumes: {  }
+networks:
+  p0k8g8o:
+    name: p0k8g8o
+    external: true
+configs: {  }
+secrets: {  }
