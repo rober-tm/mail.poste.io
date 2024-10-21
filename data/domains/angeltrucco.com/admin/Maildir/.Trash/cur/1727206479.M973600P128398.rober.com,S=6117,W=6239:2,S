@@ -1,0 +1,122 @@
+Return-Path: <postmaster+letsencrypt@angeltrucco.com>
+Delivered-To: admin@angeltrucco.com
+Received: from angeltrucco.com
+	by angeltrucco.com with LMTP
+	id auVLFUhBo2aN9gAAD3THSA
+	(envelope-from <postmaster+letsencrypt@angeltrucco.com>)
+	for <admin@angeltrucco.com>; Fri, 26 Jul 2024 06:25:12 +0000
+Authentication-Results: angeltrucco.com;
+	spf=softfail (angeltrucco.com: domain of transitioning postmaster+letsencrypt@angeltrucco.com does not designate 127.0.0.1 as permitted sender) smtp.mailfrom=postmaster+letsencrypt@angeltrucco.com smtp.helo="[127.0.0.1]";
+	dkim=none (message not signed);
+	dmarc=fail (p=NONE arc=none) header.from=angeltrucco.com header.d=angeltrucco.com
+Received-SPF: softfail (angeltrucco.com: domain of transitioning postmaster+letsencrypt@angeltrucco.com does not designate 127.0.0.1 as permitted sender)
+ client-ip=127.0.0.1;
+Received: from [127.0.0.1] (cliccaja.com [127.0.0.1])
+	by angeltrucco.com (Haraka) with ESMTPS id C5CBB08D-6D1A-4991-B850-1D4AF7F6A638.1
+	envelope-from <postmaster+letsencrypt@angeltrucco.com>
+	tls TLS_AES_256_GCM_SHA384;
+	Fri, 26 Jul 2024 06:25:09 +0000
+Subject: [ERROR] - Let's encrypt certificate issue exception
+To: admin@angeltrucco.com
+From: postmaster+letsencrypt@angeltrucco.com
+Message-ID: <560edb7e36224a191eca9c50a6ef7fd5@angeltrucco.com>
+MIME-Version: 1.0
+Date: Fri, 26 Jul 2024 06:25:09 +0000
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=angeltrucco.com;
+ h=Content-Transfer-Encoding: Content-Type: Date: MIME-Version: Message-ID:
+ From: To: Subject; q=dns/txt; s=s20240223603; t=1721975112;
+ bh=yQbsY+zR9rTO/8B/0RJD7Khe/ak4kY25mnZP3bJv7EI=;
+ b=OZI/4hsaEMwGhtwqp/iVZv13dQA9KdEh/R8LqT9/mjsxJLWnKaS2lRdYMrR+2suzgSgks4J85
+ mweFeaWEVXf50AsCC56+8ApvZ8STt6AM2792Wl50Y2Mf55t9+Bjj7iNDPUpHeF4VNyNrjdG1gyT
+ 45JCUrLjZclbZ3FjUbCW1fxJ+39t1ZsEUu9faHpdJ7Cx12h9YBGxzHfD7dEnxFVZhbZI6yYjud2
+ 0dHgsNMO58sWXMR2Ic0dz5rp0dd4dXf6xqEmhLnamSJZhBkzLageSU1lJY+2tOXsVnPJhgot/OO
+ QKfea/r5w9lAozWnaaEPdO9mKFXRknnom5D0H3CCD55w==
+
+There was error when issuing new Let's encrypt certificate
+
+[2024-07-26=
+T06:25:01.659817+00:00] LEScript.INFO: ACME Client: analogic-lescript/0.3.0=
+
+[2024-07-26T06:25:01.660011+00:00] LEScript.INFO: Getting list of URLs f=
+or API
+[2024-07-26T06:25:02.303856+00:00] LEScript.INFO: Requesting new n=
+once for client communication
+[2024-07-26T06:25:02.975214+00:00] LEScript=
+.INFO: Account already registered. Continuing.
+[2024-07-26T06:25:02.97530=
+3+00:00] LEScript.INFO: Sending registration to letsencrypt server
+[2024-=
+07-26T06:25:03.003046+00:00] LEScript.INFO: Sending signed request to https=
+://acme-v02.api.letsencrypt.org/acme/new-acct
+[2024-07-26T06:25:03.671927=
++00:00] LEScript.INFO: Account: https://acme-v02.api.letsencrypt.org/acme/a=
+cct/1581943137
+[2024-07-26T06:25:03.672038+00:00] LEScript.INFO: Starting=
+ certificate generation process for domains
+[2024-07-26T06:25:03.672310+0=
+0:00] LEScript.INFO: Requesting challenge for angeltrucco.com
+[2024-07-26=
+T06:25:03.730464+00:00] LEScript.INFO: Sending signed request to https://ac=
+me-v02.api.letsencrypt.org/acme/new-order
+[2024-07-26T06:25:04.652519+00:=
+00] LEScript.INFO: Sending signed request to https://acme-v02.api.letsencry=
+pt.org/acme/authz-v3/381989394747
+[2024-07-26T06:25:05.330896+00:00] LESc=
+ript.INFO: Got challenge token for angeltrucco.com
+[2024-07-26T06:25:05.3=
+36026+00:00] LEScript.INFO: Token for angeltrucco.com saved at /opt/www//.w=
+ell-known/acme-challenge/OoCiQWQ_Aju1kzfqeu177WJhE8RZoExHf5C7ifqO0G8 and sh=
+ould be available at http://angeltrucco.com/.well-known/acme-challenge/OoCi=
+QWQ_Aju1kzfqeu177WJhE8RZoExHf5C7ifqO0G8
+[2024-07-26T06:25:05.336165+00:00=
+] LEScript.INFO: Sending request to challenge
+[2024-07-26T06:25:05.378245=
++00:00] LEScript.INFO: Sending signed request to https://acme-v02.api.letse=
+ncrypt.org/acme/chall-v3/381989394747/Q75Ueg
+[2024-07-26T06:25:06.061955+=
+00:00] LEScript.INFO: Verification pending, sleeping 1s
+[2024-07-26T06:25=
+:07.110149+00:00] LEScript.INFO: Sending signed request to https://acme-v02=
+.api.letsencrypt.org/acme/chall-v3/381989394747/Q75Ueg
+[2024-07-26T06:25:=
+07.812078+00:00] LEScript.ERROR: 400 {   "type": "urn:ietf:params:acme:erro=
+r:malformed",   "detail": "Unable to update challenge :: authorization must=
+ be pending",   "status": 400 }
+[2024-07-26T06:25:07.812344+00:00] LEScri=
+pt.ERROR: #0 /opt/admin/vendor/analogic/lescript/Lescript.php(580): Analogi=
+c\ACME\Client->curl()
+[2024-07-26T06:25:07.812435+00:00] LEScript.ERROR: =
+#1 /opt/admin/vendor/analogic/lescript/Lescript.php(448): Analogic\ACME\Cli=
+ent->post()
+[2024-07-26T06:25:07.812542+00:00] LEScript.ERROR: #2 /opt/ad=
+min/vendor/analogic/lescript/Lescript.php(164): Analogic\ACME\Lescript->sig=
+nedRequest()
+[2024-07-26T06:25:07.812632+00:00] LEScript.ERROR: #3 /opt/a=
+dmin/src/Base/Handler/LeHandler.php(62): Analogic\ACME\Lescript->signDomain=
+s()
+[2024-07-26T06:25:07.812697+00:00] LEScript.ERROR: #4 /opt/admin/src/=
+Base/CommandInternal/RenewCommand.php(30): App\Base\Handler\LeHandler->rene=
+w()
+[2024-07-26T06:25:07.812760+00:00] LEScript.ERROR: #5 /opt/admin/vend=
+or/symfony/console/Command/Command.php(298): App\Base\CommandInternal\Renew=
+Command->execute()
+[2024-07-26T06:25:07.812824+00:00] LEScript.ERROR: #6 =
+/opt/admin/vendor/symfony/console/Application.php(1058): Symfony\Component\=
+Console\Command\Command->run()
+[2024-07-26T06:25:07.812887+00:00] LEScrip=
+t.ERROR: #7 /opt/admin/vendor/symfony/console/Application.php(301): Symfony=
+\Component\Console\Application->doRunCommand()
+[2024-07-26T06:25:07.81295=
+0+00:00] LEScript.ERROR: #8 /opt/admin/src/Base/CommandInternal/Application=
+.php(80): Symfony\Component\Console\Application->doRun()
+[2024-07-26T06:2=
+5:07.813012+00:00] LEScript.ERROR: #9 /opt/admin/vendor/symfony/console/App=
+lication.php(171): App\Base\CommandInternal\Application->doRun()
+[2024-07=
+-26T06:25:07.813076+00:00] LEScript.ERROR: #10 /opt/admin/bin/mailserver(42=
+): Symfony\Component\Console\Application->run()
+[2024-07-26T06:25:07.8131=
+39+00:00] LEScript.ERROR: #11 {main}
+

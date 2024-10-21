@@ -1,0 +1,19 @@
+MIME-Version: 1.0
+Date: Fri, 23 Feb 2024 10:41:34 -0300
+From: Estudio Angel Trucco <info@angeltrucco.com>
+To: test-44f6wl422@srv1.mail-tester.com
+Subject: Modelo ajuste por reca y BI perc
+Message-ID: <416189be2671481b57c0d98c0ff83ad7@angeltrucco.com>
+X-Sender: info@angeltrucco.com
+Organization: Estudio Angel Trucco
+Content-Type: text/plain; charset=US-ASCII;
+ format=flowed
+Content-Transfer-Encoding: 7bit
+
+This solved my problem and I can run apt update and other things.
+
+note: this solution is a temporary solution. I'll let you know if I find 
+a permanent solution.
+
+edit: I've found the solution. The problem occurs if your disk has lots 
+of bad sectors. You have to ignore these bad sectors on the disk.

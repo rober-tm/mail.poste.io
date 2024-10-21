@@ -1,0 +1,150 @@
+Return-Path: <info@angeltrucco.com>
+Delivered-To: admin@angeltrucco.com
+Received: from mail.angeltrucco.com
+	by mail.angeltrucco.com with LMTP
+	id Nsg2K9Q+qmZwLQAAD3THSA
+	(envelope-from <info@angeltrucco.com>)
+	for <admin@angeltrucco.com>; Wed, 31 Jul 2024 13:40:36 +0000
+Authentication-Results: mail.angeltrucco.com;
+	auth=pass (login)
+Received: from localhost (host19.201-252-77.telecom.net.ar [201.252.77.19])
+	by mail.angeltrucco.com (Haraka) with ESMTPSA id 3109DC92-CE85-4DB8-A23F-7A13CB96AB46.1
+	envelope-from <info@angeltrucco.com>
+	tls TLS_AES_256_GCM_SHA384 (authenticated bits=0);
+	Wed, 31 Jul 2024 13:40:35 +0000
+From: "Angel Trucco" <info@angeltrucco.com>
+Date: Wed, 31 Jul 2024 13:40:35 +0000
+Mime-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+To: <admin@angeltrucco.com>
+Subject: Finished: list.csv import
+Message-Id: <1722433235330606611.1.1108580483816374999@2c7127dcc3ff>
+X-Haraka-GeoIP: AR
+X-Haraka-GeoIP-Received: 201.252.77.19:AR
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=angeltrucco.com;
+ h=Message-Id: Subject: To: Content-Transfer-Encoding: Content-Type:
+ Mime-Version: Date: From; q=dns/txt; s=s20240223603; t=1722433236;
+ bh=tfsha086PD7UemcWgxj7jAMafdPP9aQb5sMp0U+IU1U=;
+ b=UJ6FTRmDf5Qxyf6L+OboijJWhKT2142Nlp1u+HHIzKbZ7HGiW5w5AyrRftudI3Ie7hf5i3w1d
+ OYhExrWd9v9nzVofphEYcQRLVE8Nj38bRVXBSCk6TLlvBKR/5ZkKEyX+tEtGcezgXPhCEIk4jHO
+ oU03RbOw0yyALT8nt2lVvFAv60+DDAoEmojT/MbEWR3XTgjc1DmJ0IaW3+YasMgV7xbfNFFRAw7
+ r4gFokEVjVAt+NC3XSwUkTaZpXzzGSZGMWRq/JajwIWtYE6SwBW5flfTDK5kjYuMKPW2NkO3y3w
+ SRehqBviBJsrKRlXi67lA9BYIGtspB8uaUiqPszI/RXQ==
+
+
+
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Du=
+tf-8" />
+        <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-sc=
+ale=3D1, minimum-scale=3D1" />
+        <base target=3D"_blank">
+
+        <style>
+            body {
+                background-color: #F0F1F3;
+                font-family: 'Helvetica Neue', 'Segoe UI', Helvetica, sans-=
+serif;
+                font-size: 15px;
+                line-height: 26px;
+                margin: 0;
+                color: #444;
+            }
+
+            .wrap {
+                background-color: #fff;
+                padding: 30px;
+                max-width: 525px;
+                margin: 0 auto;
+                border-radius: 5px;
+            }
+
+            .header {
+                border-bottom: 1px solid #eee;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+            }
+
+            .footer {
+                text-align: center;
+                font-size: 12px;
+                color: #888;
+            }
+                .footer a {
+                    color: #888;
+                }
+
+            .gutter {
+                padding: 30px;
+            }
+            .button {
+                background: #0055d4;
+                color: #fff !important;
+                display: inline-block;
+                border-radius: 3px;
+                padding: 10px 30px;
+                text-align: center;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            .button:hover {
+                background: #222;
+                color: #fff;
+            }
+            img {
+                max-width: 100%;
+            }
+
+            a {
+                color: #0055d4;
+            }
+                a:hover {
+                    color: #111;
+                }
+            @media screen and (max-width: 600px) {
+                .wrap {
+                    max-width: auto;
+                }
+                .gutter {
+                    padding: 10px;
+                }
+            }
+        </style>
+    </head>
+<body style=3D"background-color: #F0F1F3;">
+    <div class=3D"gutter">&nbsp;</div>
+    <div class=3D"wrap">
+        <div class=3D"header">
+           =20
+        </div>
+
+<h2>Actualizaci=C3=B3n importada</h2>
+<table width=3D"100%">
+    <tr>
+        <td width=3D"30%"><strong>Archivo</strong></td>
+        <td><a href=3D"https://listmonk.angeltrucco.com/admin/subscribers/i=
+mport">list.csv</a></td>
+    </tr>
+    <tr>
+        <td width=3D"30%"><strong>Estado</strong></td>
+        <td>finished</td>
+    </tr>
+    <tr>
+        <td width=3D"30%"><strong>Registros</strong></td>
+        <td>1 / 0</td>
+    </tr>
+</table>
+
+    </div>
+   =20
+    <div class=3D"footer">
+        <p>Propulsado por <a href=3D"https://listmonk.app" target=3D"_blank=
+" rel=3D"noreferrer">listmonk</a></p>
+    </div>
+    <div class=3D"gutter">&nbsp;</div>
+</body>
+</html>
+

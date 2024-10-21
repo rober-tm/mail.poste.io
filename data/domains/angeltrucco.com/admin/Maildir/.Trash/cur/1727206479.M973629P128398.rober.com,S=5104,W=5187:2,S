@@ -1,0 +1,83 @@
+Return-Path: <noreply-dmarc-support@google.com>
+Delivered-To: admin@angeltrucco.com
+Received: from mail.angeltrucco.com
+	by mail.angeltrucco.com with LMTP
+	id IQ0sNgby62bRQgQAD3THSA
+	(envelope-from <noreply-dmarc-support@google.com>)
+	for <admin@angeltrucco.com>; Thu, 19 Sep 2024 09:42:30 +0000
+Authentication-Results: mail.angeltrucco.com;
+	iprev=pass;
+	spf=pass (mail.angeltrucco.com: domain of noreply-dmarc-support@google.com designates 209.85.219.73 as permitted sender) smtp.mailfrom=noreply-dmarc-support@google.com smtp.helo=mail-qv1-f73.google.com;
+	dkim=pass header.i=@google.com header.s=20230601 header.a=rsa-sha256 header.b=sWpZ5eip;
+	dmarc=pass (p=REJECT arc=none) header.from=google.com header.d=google.com
+Received-SPF: pass (mail.angeltrucco.com: domain of noreply-dmarc-support@google.com designates 209.85.219.73 as permitted sender) client-ip=209.85.219.73;
+X-Haraka-FCrDNS: mail-qv1-f73.google.com
+Received: from mail-qv1-f73.google.com (mail-qv1-f73.google.com [209.85.219.73])
+	by mail.angeltrucco.com (Haraka) with ESMTPS id 846C425E-2A4A-4772-9F59-DBEA1AEABC09.1
+	envelope-from <noreply-dmarc-support@google.com>
+	tls TLS_AES_256_GCM_SHA384;
+	Thu, 19 Sep 2024 09:42:25 +0000
+Received: by mail-qv1-f73.google.com with SMTP id 6a1803df08f44-6c5bd369336so10057476d6.2
+        for <admin@angeltrucco.com>; Thu, 19 Sep 2024 02:42:24 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20230601; t=1726738942; x=1727343742; darn=angeltrucco.com;
+        h=content-transfer-encoding:content-disposition:to:from:subject
+         :message-id:date:mime-version:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=PvnSEG4BZDNEka/SiftyB2mPAUknftx44KIDLF1uM4c=;
+        b=sWpZ5eipAtm0v8Oun9JBtp+CwBHaVrsciPSAJ7+P0qD7ps+4b4u61y3KuUJ9HxwUOA
+         kMGPS6D4AZDpRnjEJ+z+c7eJHBAb9c1tGECL5xyOtWfb/6JKxVeFFQXrH968NHd2uyCC
+         mlT7GQtFUDJznuLKBy34OxUGVhoGl326SHSK8mlVO0MQrzy27RyC0G0PXtvsI6mxKueO
+         /HhPMrQ/I6n+PUcQV1orKlKaM+RWoxEbZ7SbOtdsJmLhjHomJQd9eR4nLSgScxGXDGrU
+         tvMDEMN53kZcCNAOR5ny3jaYWRAYqZa0FvKUYq/fIIz5x7+ZLrkXNTroxGp9Wjr+EwM6
+         QIBA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1726738942; x=1727343742;
+        h=content-transfer-encoding:content-disposition:to:from:subject
+         :message-id:date:mime-version:x-gm-message-state:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=PvnSEG4BZDNEka/SiftyB2mPAUknftx44KIDLF1uM4c=;
+        b=ulV9OopIHH1U0sHYe6NFKWvcoSChagsoEfLi55xo58lJsgnjfTaQvoz0lXUvmRpqno
+         0b6TkMwI2KMbm1R7hl4uuDNS5jD/TKUeFA1+PpYzAE7wKUlL/ZXXxV9+PyVHAhwVq079
+         FV/76sIOE4E/x1tHhdRz+VBnDyCZpY4egr0EJpHhQ7ULR0RqsLn20R+aBsx7i9YnbhJL
+         JNCljHHXBeNrb2hsBn1nQah87z7V6V1FSgI2AdYcQL8ZfUlNJMY7TsbC6ifzf4s7Qko3
+         ZL+3EptazU0HIAGR5A2sy8gqmR97hOg4uX/mR3CjS5Fk1cB/E0LYWm4CngroAthCJReB
+         lS0g==
+X-Gm-Message-State: AOJu0YxCbVWQwrwwQtDAT4WJY/CQd1y+UyyJXOfHmmImb50gMcnDmhZv
+	NbacBmYSErjYkqQr4DR5wInIs35m42wkWftmQ1H9OgbilhqfrNXu7A0oraDpxXiHFAQ=
+X-Google-Smtp-Source: AGHT+IHDQkzFe1xL9wurhbldf/3+jaUGrkSi78ejlUs7hZARhT9A89gaiHqhgUQTkiuFsSP9Ru7DXDqOCl0M0A==
+MIME-Version: 1.0
+X-Received: by 2002:a05:6214:4197:b0:6c4:79df:a2d9 with SMTP id
+ 6a1803df08f44-6c573510551mr355891366d6.9.1726738942112; Thu, 19 Sep 2024
+ 02:42:22 -0700 (PDT)
+Date: Wed, 18 Sep 2024 16:59:59 -0700
+Message-ID: <10666480205073448382@google.com>
+Subject: Report domain: angeltrucco.com Submitter: google.com Report-ID: 10666480205073448382
+From: noreply-dmarc-support@google.com
+To: admin@angeltrucco.com
+Content-Type: application/zip; 
+	name="google.com!angeltrucco.com!1726617600!1726703999.zip"
+Content-Disposition: attachment; 
+	filename="google.com!angeltrucco.com!1726617600!1726703999.zip"
+Content-Transfer-Encoding: base64
+X-Haraka-Karma: score: 3, good: 1, connections: 1, history: 1, awards: 089,131, fail:rcpt_to
+X-p0f-Result: os="Linux 2.2.x-3.x" link_type="DSL" distance=26 total_conn=1
+X-Rspamd-Bar: /
+X-Rspamd-Report: DMARC_POLICY_ALLOW(-0.5) R_DKIM_ALLOW(-0.2) R_SPF_ALLOW(-0.2)
+X-Rspamd-Score: -0.9
+X-Haraka-GeoIP: US
+X-Haraka-GeoIP-Received: 209.85.219.73:US
+
+UEsDBAoAAAAIAANKM1lAy5GV8wEAAMsEAAA0AAAAZ29vZ2xlLmNvbSFhbmdlbHRydWNjby5jb20h
+MTcyNjYxNzYwMCExNzI2NzAzOTk5LnhtbK1UTZOjIBC9z6+wco8gMZpsMcye9hfsni2CraFGgQKc
+j3+/OKBxkz3sYU/i69evux+t9OVjHLI3sE5q9bwrcrzLQAndStU/7379/LE/7bIX9kQ7gPbCxSt7
+yjJqwWjrmxE8b7nnMxZQbftG8RFYr3U/QC70SNEKRg6MXA5M6aAwfO7bkVuxd5OZ5b5v0yIv5Xx4
+yxuhlefCN1J1ml29N+4bQik1v6Uijrhy72ARKavqeMJB6zE/CqcxZMsKXFVVecIEH3F9KMvT4UQo
+usUjP8wKjeWqT9ME6AK9VKyoSVUVdYVDtYgscVDtV7TGh/P5HHpRixj6U22ttjWVGj1I8dmY6TJI
+d4W1ER3sUWzOHbydhNDRtYRHEm9f5cgsRfGQQGe6L2x+RsiE61BAkUnvbgHcghjhg0NhtvkQIbWQ
+lInd/63TYLDQdmna6vfVFqcnK6CRhhFc5ORI8rrOi+DPLbBQhZ6UZweK4mGBUz1448MUjGyXwOyO
+dEY76cNGpya3yIY322K4c4GwOpQs6FJgtWkz413NcHPLZFS2oLzsZPie1rQr8BZs01k9Pt7YNpjU
+HjQon/y1seCmwd9k71r+l5VISz/rpPHSy2ZyGEB4bZkjmJSYkEOFg/crvHqxLU83Lv2nVjbOh2W9
+m38mx8Wi6PZf+g1QSwECCgAKAAAACAADSjNZQMuRlfMBAADLBAAANAAAAAAAAAAAAAAAAAAAAAAA
+Z29vZ2xlLmNvbSFhbmdlbHRydWNjby5jb20hMTcyNjYxNzYwMCExNzI2NzAzOTk5LnhtbFBLBQYA
+AAAAAQABAGIAAABFAgAAAAA=

@@ -1,0 +1,116 @@
+Return-Path: <postmaster+letsencrypt@angeltrucco.com>
+Delivered-To: admin@angeltrucco.com
+Received: from angeltrucco.com
+	by angeltrucco.com with LMTP
+	id jwy0DhaRombpDwAAD3THSA
+	(envelope-from <postmaster+letsencrypt@angeltrucco.com>)
+	for <admin@angeltrucco.com>; Thu, 25 Jul 2024 17:53:26 +0000
+Authentication-Results: angeltrucco.com;
+	spf=softfail (angeltrucco.com: domain of transitioning postmaster+letsencrypt@angeltrucco.com does not designate 127.0.0.1 as permitted sender) smtp.mailfrom=postmaster+letsencrypt@angeltrucco.com smtp.helo="[127.0.0.1]";
+	dkim=none (message not signed);
+	dmarc=fail (p=NONE arc=none) header.from=angeltrucco.com header.d=angeltrucco.com
+Received-SPF: softfail (angeltrucco.com: domain of transitioning postmaster+letsencrypt@angeltrucco.com does not designate 127.0.0.1 as permitted sender)
+ client-ip=127.0.0.1;
+Received: from [127.0.0.1] (cliccaja.com [127.0.0.1])
+	by angeltrucco.com (Haraka) with ESMTPS id C03AF6A8-316C-4C05-9490-F1247FBABA5B.1
+	envelope-from <postmaster+letsencrypt@angeltrucco.com>
+	tls TLS_AES_256_GCM_SHA384;
+	Thu, 25 Jul 2024 17:53:23 +0000
+Subject: [ERROR] - Let's encrypt certificate issue exception
+To: admin@angeltrucco.com
+From: postmaster+letsencrypt@angeltrucco.com
+Message-ID: <15d0d75435ebf04924ace9574be8c173@angeltrucco.com>
+MIME-Version: 1.0
+Date: Thu, 25 Jul 2024 17:53:23 +0000
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=angeltrucco.com;
+ h=Content-Transfer-Encoding: Content-Type: Date: MIME-Version: Message-ID:
+ From: To: Subject; q=dns/txt; s=s20240223603; t=1721930006;
+ bh=WJpROqXWPvKKV1R3R6i9jWQMgK9HEuqNrGxjyqrX/84=;
+ b=us9Bbj2m0/favqSuKW0rY0ubA13smj60DYudw9oIIZ8c7Znz4TgGsPSxw3U+U8UvIFTBoosGQ
+ SZyvgscEhS2msZmiuZ2L0OLDjpvG4n4O9yjtPKOqA5H2JanHMpWebNpuVd+m3JYR5NI462LTN7g
+ kI5tQegLSvBGfbPEXhclTs9VtqstcPI76zQXmadUSektsupbRNrx7C0JNWHSfKSB2F5yvQCJw9H
+ L1NqH2J6EzqEq/d6p9FURSIF0609Bevlbly1k3Ln4r4zwivQbAxWO6nHDU0YocmHSu7mp3w9LJT
+ Qe5APqMb7WyMTYXha+3rPa5ncQut3zewseHcL5h4mBqA==
+
+There was error when issuing new Let's encrypt certificate
+
+[2024-07-25=
+T17:53:16.174308+00:00] LEScript.INFO: ACME Client: analogic-lescript/0.3.0=
+
+[2024-07-25T17:53:16.174554+00:00] LEScript.INFO: Getting list of URLs f=
+or API
+[2024-07-25T17:53:16.869285+00:00] LEScript.INFO: Requesting new n=
+once for client communication
+[2024-07-25T17:53:17.545228+00:00] LEScript=
+.INFO: Account already registered. Continuing.
+[2024-07-25T17:53:17.54534=
+1+00:00] LEScript.INFO: Sending registration to letsencrypt server
+[2024-=
+07-25T17:53:17.573573+00:00] LEScript.INFO: Sending signed request to https=
+://acme-v02.api.letsencrypt.org/acme/new-acct
+[2024-07-25T17:53:18.259344=
++00:00] LEScript.INFO: Account: https://acme-v02.api.letsencrypt.org/acme/a=
+cct/1581943137
+[2024-07-25T17:53:18.259526+00:00] LEScript.INFO: Starting=
+ certificate generation process for domains
+[2024-07-25T17:53:18.260023+0=
+0:00] LEScript.INFO: Requesting challenge for angeltrucco.com
+[2024-07-25=
+T17:53:18.300960+00:00] LEScript.INFO: Sending signed request to https://ac=
+me-v02.api.letsencrypt.org/acme/new-order
+[2024-07-25T17:53:19.231274+00:=
+00] LEScript.INFO: Sending signed request to https://acme-v02.api.letsencry=
+pt.org/acme/authz-v3/381762660857
+[2024-07-25T17:53:19.920349+00:00] LESc=
+ript.INFO: Got challenge token for angeltrucco.com
+[2024-07-25T17:53:19.9=
+21145+00:00] LEScript.INFO: Token for angeltrucco.com saved at /opt/www//.w=
+ell-known/acme-challenge/Nasm7QjrVp5qAsCQRvAGZzLhaJuGDXorTDuoAvQ6Qdc and sh=
+ould be available at http://angeltrucco.com/.well-known/acme-challenge/Nasm=
+7QjrVp5qAsCQRvAGZzLhaJuGDXorTDuoAvQ6Qdc
+[2024-07-25T17:53:19.921299+00:00=
+] LEScript.INFO: Sending request to challenge
+[2024-07-25T17:53:19.964180=
++00:00] LEScript.INFO: Sending signed request to https://acme-v02.api.letse=
+ncrypt.org/acme/chall-v3/381762660857/GM_p4w
+[2024-07-25T17:53:20.682176+=
+00:00] LEScript.INFO: Verification pending, sleeping 1s
+[2024-07-25T17:53=
+:21.701141+00:00] LEScript.INFO: Sending signed request to https://acme-v02=
+.api.letsencrypt.org/acme/chall-v3/381762660857/GM_p4w
+[2024-07-25T17:53:=
+22.411062+00:00] LEScript.ERROR: 400 {   "type": "urn:ietf:params:acme:erro=
+r:malformed",   "detail": "Unable to update challenge :: authorization must=
+ be pending",   "status": 400 }
+[2024-07-25T17:53:22.411146+00:00] LEScri=
+pt.ERROR: #0 /opt/admin/vendor/analogic/lescript/Lescript.php(580): Analogi=
+c\ACME\Client->curl()
+[2024-07-25T17:53:22.411183+00:00] LEScript.ERROR: =
+#1 /opt/admin/vendor/analogic/lescript/Lescript.php(448): Analogic\ACME\Cli=
+ent->post()
+[2024-07-25T17:53:22.411215+00:00] LEScript.ERROR: #2 /opt/ad=
+min/vendor/analogic/lescript/Lescript.php(164): Analogic\ACME\Lescript->sig=
+nedRequest()
+[2024-07-25T17:53:22.411245+00:00] LEScript.ERROR: #3 /opt/a=
+dmin/src/Base/Handler/LeHandler.php(62): Analogic\ACME\Lescript->signDomain=
+s()
+[2024-07-25T17:53:22.411275+00:00] LEScript.ERROR: #4 /opt/admin/src/=
+Base/Controller/LeController.php(71): App\Base\Handler\LeHandler->renew()=
+
+[2024-07-25T17:53:22.411305+00:00] LEScript.ERROR: #5 /opt/admin/vendor/=
+symfony/http-kernel/HttpKernel.php(163): App\Base\Controller\LeController->=
+issueAction()
+[2024-07-25T17:53:22.411336+00:00] LEScript.ERROR: #6 /opt/=
+admin/vendor/symfony/http-kernel/HttpKernel.php(75): Symfony\Component\Http=
+Kernel\HttpKernel->handleRaw()
+[2024-07-25T17:53:22.411365+00:00] LEScrip=
+t.ERROR: #7 /opt/admin/vendor/symfony/http-kernel/Kernel.php(202): Symfony\=
+Component\HttpKernel\HttpKernel->handle()
+[2024-07-25T17:53:22.411395+00:=
+00] LEScript.ERROR: #8 /opt/admin/public/index.php(27): Symfony\Component\H=
+ttpKernel\Kernel->handle()
+[2024-07-25T17:53:22.411426+00:00] LEScript.ER=
+ROR: #9 {main}
+

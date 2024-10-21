@@ -19,4 +19,5 @@ config_plex
 pelis.json
 flexget/db-config-jobs.sqlite
 flexget/db-config.sqlite
-data
+data/var
+data/log
